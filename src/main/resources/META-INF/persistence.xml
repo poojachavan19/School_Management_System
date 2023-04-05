@@ -1,0 +1,29 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+  http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+	version="2.1">
+
+	<persistence-unit name="school">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		
+		<properties>
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.cj.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/school" />
+			<property name="javax.persistence.jdbc.user"
+				value="root" />
+			<property name="javax.persistence.jdbc.password"
+				value="12345" />
+			<property name="hibernate.show_sql" value="true"/>
+			<!--To display a query on console use value=true, if value is false then the query is not displayed in console.. -->
+
+
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+			<!-- To convert java datatypes into  database dataype, we can yse dialect -->
+  			
+			</properties>
+	</persistence-unit>
+</persistence>
